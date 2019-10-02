@@ -1,0 +1,13 @@
+---
+check_mk_agent::ensure: 'present'
+check_mk_agent::check_mk_server: 'check_mk.example.internal'
+check_mk_agent::site: 'mysite'
+check_mk_agent::username: 'automation'
+check_mk_agent::secret: 'n7dfc9e4-0e50-4f52-9269-01x0fe2d6z7a'
+check_mk_agent::folder: 'os/centos'
+check_mk_agent::tag_agent: 'cmk-agent'
+check_mk_agent::tag_criticality: 'prod'
+check_mk_agent::tag_address_family: 'ip-v4-only'
+check_mk_agent::package: 'check-mk-agent-1.5.0p19-1.noarch.rpm'
+check_mk_agent::package_source: 'server'
+check_mk_agent::agent_ssh_key: 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDMi$... localhost'
