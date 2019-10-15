@@ -70,7 +70,7 @@ class Puppet::Provider::CheckMkAgent::CheckMkAgent < Puppet::ResourceApi::Simple
     query, data = get_request(changes, 'add_host')
     response = api_request(check_mk_server, query, data)
     if response['result'] && response['result'].include?('already exists')
-      method_debug("Agent registration exists on '#{name}' but local state out of sync.", "warn")
+      method_debug("Agent registration exists on '#{name}' but local state out of sync.", 'warn')
     elsif response['result_code'] == 0
       ['discover_services', 'activate_changes'].each do |action|
         query, data = get_request(changes, action)
